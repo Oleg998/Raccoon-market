@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-vite-template",
+  "name": "raccoon-market",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Raccoon-market-project/",
+    "build": "vite build --base=/Raccoon-market/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview",
     "predeploy": "npm run build",
