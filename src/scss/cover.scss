@@ -1,0 +1,154 @@
+.cover {
+  padding-top: 125px;
+   @include media(desktop){
+    padding-top: 87px;
+   }
+}
+
+.cover-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+
+ @include media(desktop){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+  }
+}
+
+.cover-text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 272px;
+  gap: 8px;
+   @include media(desktop){
+    margin: 0;
+    order: -1;
+    max-width: 540px;
+    gap: 16px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.cover-titel {
+  font-weight: 700;
+  font-size: 20px;
+   @include media(desktop){font-size: 36px;
+  font-family: var(--second-family);
+  white-space: nowrap;
+  } 
+}
+.cover-subtitel{
+  font-size: 16px;
+   @include media(desktop){font-size: 20px;
+    white-space: nowrap;} 
+}
+
+.cover-titel span:nth-child(1) {
+  color: var(--blue);
+}
+
+.cover-titel span:nth-child(2) {
+  color: var(--pink);
+}
+
+.cover-titel span:nth-child(3) {
+  color: var(--yelow);
+}
+
+.cover-img-conteiner {
+  position: relative;
+  margin-top: 48px;
+  margin-bottom: 32px;
+  z-index: 5;
+ @include media(desktop) {
+    display: grid;
+    margin-bottom: 0;
+    order: -1;
+    grid-area: 1 / 2 / 5 / 3;
+    align-self:self-start;
+  
+  }
+}
+.cover-img-conteiner::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 70%;
+background: radial-gradient(
+  circle, 
+  rgba(0, 255, 0, 0.9), 
+  rgba(0, 255, 0, 0)
+);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+   z-index: -1;
+}
+
+.cover-img {
+  display: block;
+  width: 272px;
+  height: 100%;
+
+   @include media(desktop) {
+    width: 685px;
+    height: 100%;
+  }
+}
+
+.cover-google {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+
+    @include media(desktop) {
+    margin-right: auto;
+    margin-top: 0;
+    order: -1;
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  padding: 8px;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+
+   @include media(desktop){
+    padding: 18px 24px;
+  }
+}
+
+.google-button:focus,
+.google-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.google-button:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cover-google-icon {
+  width: 16px;
+  height: 17px;
+  margin-right: 8px;
+}
+
+.cover-link {
+  font-family: var(--second-family);
+  font-size: 20px;
+  white-space: nowrap;
+}

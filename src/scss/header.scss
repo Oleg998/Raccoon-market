@@ -1,0 +1,127 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+  padding-top: 1px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--black);
+  z-index: 20;
+  scroll-margin-top: 50px;
+  @include media(desktop) {
+    scroll-margin-top: 90px;
+  }
+}
+[id] {
+  scroll-margin-top: 50px;
+  @include media(desktop) {
+    scroll-margin-top: 90px;
+  }
+}
+.header-navigation {
+  margin: 0 auto;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  @include media (desktop){
+    max-width: 100%;
+  }
+}
+.header-logo {
+  display: flex;
+  @include media(desktop) {
+    order: -1;
+  }
+}
+.header-logo-img {
+  width: 56px;
+  height: 50px;
+  @include media(desktop) {
+    width: 98px;
+    height: 88px;
+  }
+}
+.header-menu {
+  @include media(to-desktop) {
+    padding: 24px 16px;
+    display: block;
+    position: fixed;
+    left: -129px;
+    top: 0;
+    z-index: 100;
+    width: 129px;
+    height: 246px;
+    background-color: var(--black);
+    transition: left 300ms ease-out;
+  }
+}
+.header-menu.is-open {
+  left: 0;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+  z-index: 20;
+}
+.backdrop.active {
+  visibility: visible;
+  opacity: 1;
+}
+.header-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include media(desktop) {
+    flex-direction: row;
+  }
+}
+
+.header-list-link {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--white);
+}
+.header-list-link:focus,
+.header-list-link:hover {
+  color: var(--yelow);
+}
+.header-list-link:active {
+  color: var(--orange);
+}
+.header-list-link.active {
+  color: var(--orange);
+}
+.open-menu {
+  display: block;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 18px;
+  height: 12px;
+  transition: background-color 300ms ease-in-out;
+  @include media(desktop) {
+    display: none;
+  }
+}
+.burger {
+  width: 18px;
+  height: 12px;
+}
+.hidden {
+  display: none;
+}
+.no-scroll {
+    overflow: hidden;
+}

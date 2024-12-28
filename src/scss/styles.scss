@@ -1,0 +1,71 @@
+@import './header.scss';
+@import './cover.scss';
+@import './advantages.scss';
+@import './benefits.scss';
+@import './reviews.scss';
+@import './about.scss';
+@import './gallery.scss';
+@import './footer.scss';
+@import './modal.scss';
+@import './privacy.scss';
+@import './terms.scss';
+
+:root {
+  --font-family: 'Comic Neue', sans-serif;
+  --second-family: 'Coiny', sans-serif;
+  --third-family: 'Jua', sans-serif;
+  --font3: 'Capriola', sans-serif;
+  --font4: 'Roboto', sans-serif;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  --black: #101205;
+  --white: #fff;
+  --green: #76cd0b;
+  --yelow: #ffca33;
+  --orange: #f49f48;
+  --pink: #fd6e76;
+  --blue: #6de3fe;
+
+  background-color: var(--black);
+  color: var(--white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  background-color: var(--black);
+  color: var(--white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+section {
+  padding: 40px 0px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 0px 24px;
+}
+
+@include media(desktop) {
+  section {
+    padding: 40px 0px;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0px 48px;
+  }
+}
